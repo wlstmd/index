@@ -33,7 +33,7 @@ ul {
 }
 
 li {
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin: 15px 0;
     position: relative;
     padding-left: 20px;
@@ -49,19 +49,37 @@ li::before {
 }
 
 a {
-    color: #f0f8ff;
-    text-decoration: none;
-    transition: color 0.3s, transform 0.3s;
-    cursor: pointer;
+  position: relative;
+  display: inline-block;
+  color: #f0f8ff;
+  text-decoration: none;
+  transition:
+    transform 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+    letter-spacing 0.4s ease,
+    color 0.3s ease;
 }
-
+ 
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #f0f8ff;
+  transition: width 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+  
 a:hover {
-    color: #74c0fc;
-    transform: scale(1.05);
-    display: inline-block;
+  transform: scale(1.05);
+  letter-spacing: 0.5px;
 }
+  
+a:hover::after {
+  width: 100%;
+}  
 
-.stars {
+  .stars {
     position: absolute;
     top: 0;
     left: 0;
