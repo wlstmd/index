@@ -1,10 +1,10 @@
 body {
-    margin: 0;
+    margin: 50px;
     padding: 0;
     font-family: 'Arial', sans-serif;
     background: radial-gradient(circle at center, #1a3552, #1d3159, #133152);
     height: 100vh;
-    overflow: hidden;
+    overflow: auto;
     color: #f0f8ff;
     display: flex;
     flex-direction: column;
