@@ -11,67 +11,74 @@
     />
     <title>Jinseung Yu</title>
   </head>
+
   <body>
-    <!-- Corner marks -->
     <div class="corner tl"></div>
     <div class="corner tr"></div>
     <div class="corner bl"></div>
     <div class="corner br"></div>
 
-    <!-- Clock -->
-    <div class="clock-strip">
-      <div id="clock"></div>
-      <div id="date-str"></div>
-    </div>
+    <header class="hero">
+      <div class="ambient"></div>
+      <div class="grain"></div>
 
-    <!-- ── HERO COVER ── -->
-    <section class="hero">
-      <img src="./images/profile.png" alt="wlstmd" class="hero-img" />
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <p class="eyebrow">personal &nbsp;/&nbsp; cloud &nbsp;/&nbsp; portal</p>
-        <h1 class="domain-name">wlstmd<span class="tld">.cloud</span></h1>
+      <nav class="topbar">
+        <span class="top-label">personal / cloud / infrastructure</span>
+        <div class="clock-strip">
+          <div id="clock"></div>
+          <div id="date-str"></div>
+        </div>
+      </nav>
+
+      <div class="hero-inner">
+        <h1 class="domain-name">wlstmd<span>.cloud</span></h1>
+
+        <p class="hero-desc">
+          A personal gateway for cloud labs, experiments, notes, and services.
+        </p>
+
         <div class="meta">
-          <span class="meta-item"
-            >by
-            <a href="https://github.com/wlstmd" target="_blank"
-              >@wlstmd</a
-            ></span
-          >
-          <div class="meta-dot"></div>
-          <span class="meta-item">welcome, curious wanderer.</span>
-          <div class="meta-dot"></div>
-          <span class="unstable"><strong>unstable</strong> by design</span>
+          <a href="https://github.com/wlstmd" target="_blank">by @wlstmd</a>
+          <span>cloud native playground</span>
+          <span class="danger">unstable by design</span>
         </div>
       </div>
-    </section>
 
-    <!-- ── MAIN ── -->
-    <div class="container">
-      <!-- Sites -->
-      <section class="sites-section">
-        <p class="section-label">public nodes</p>
+      <a href="#nodes" class="scroll-down" aria-label="Scroll down">
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </header>
+
+    <main class="container">
+      <section id="nodes" class="section">
+        <div class="section-title">
+          <span></span>
+          <p>public nodes</p>
+        </div>
+
         <div class="sites-grid">
           <a
             href="https://terminal.wlstmd.cloud"
             target="_blank"
             class="site-card"
           >
-            <div class="site-card-left">
-              <div class="site-status" style="animation-delay: 0s"></div>
-              <span class="site-card-name"
-                >TERMINAL<span>.wlstmd.cloud</span></span
-              >
+            <div class="site-icon"><i class="fa-solid fa-terminal"></i></div>
+            <div class="site-info">
+              <strong>Terminal</strong>
+              <small>terminal.wlstmd.cloud</small>
             </div>
-            <span class="site-card-arrow">↗</span>
+            <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
           </a>
 
           <a href="https://blog.wlstmd.cloud" target="_blank" class="site-card">
-            <div class="site-card-left">
-              <div class="site-status" style="animation-delay: 0.4s"></div>
-              <span class="site-card-name">BLOG<span>.wlstmd.cloud</span></span>
+            <div class="site-icon">
+              <i class="fa-regular fa-file-lines"></i>
             </div>
-            <span class="site-card-arrow">↗</span>
+            <div class="site-info">
+              <strong>Blog</strong>
+              <small>blog.wlstmd.cloud</small>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
           </a>
 
           <a
@@ -79,13 +86,14 @@
             target="_blank"
             class="site-card"
           >
-            <div class="site-card-left">
-              <div class="site-status" style="animation-delay: 0.8s"></div>
-              <span class="site-card-name"
-                >PORTFOLIO<span>.wlstmd.cloud</span></span
-              >
+            <div class="site-icon">
+              <i class="fa-regular fa-window-maximize"></i>
             </div>
-            <span class="site-card-arrow">↗</span>
+            <div class="site-info">
+              <strong>Portfolio</strong>
+              <small>portfolio.wlstmd.cloud</small>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
           </a>
 
           <a
@@ -93,21 +101,21 @@
             target="_blank"
             class="site-card"
           >
-            <div class="site-card-left">
-              <div class="site-status" style="animation-delay: 1.2s"></div>
-              <span class="site-card-name"
-                >LINUX<span>.wlstmd.cloud</span></span
-              >
+            <div class="site-icon"><i class="fa-brands fa-linux"></i></div>
+            <div class="site-info">
+              <strong>Linux</strong>
+              <small>linux.wlstmd.cloud</small>
             </div>
-            <span class="site-card-arrow">↗</span>
+            <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
           </a>
 
           <a href="https://web.wlstmd.cloud" target="_blank" class="site-card">
-            <div class="site-card-left">
-              <div class="site-status" style="animation-delay: 1.6s"></div>
-              <span class="site-card-name">WEB<span>.wlstmd.cloud</span></span>
+            <div class="site-icon"><i class="fa-solid fa-globe"></i></div>
+            <div class="site-info">
+              <strong>Web</strong>
+              <small>web.wlstmd.cloud</small>
             </div>
-            <span class="site-card-arrow">↗</span>
+            <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
           </a>
 
           <a
@@ -115,76 +123,102 @@
             target="_blank"
             class="site-card"
           >
-            <div class="site-card-left">
-              <div class="site-status" style="animation-delay: 2s"></div>
-              <span class="site-card-name"
-                >SPOTIFY<span>.wlstmd.cloud</span></span
-              >
+            <div class="site-icon"><i class="fa-brands fa-spotify"></i></div>
+            <div class="site-info">
+              <strong>Spotify</strong>
+              <small>spotify.wlstmd.cloud</small>
             </div>
-            <span class="site-card-arrow">↗</span>
+            <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
           </a>
 
           <a href="https://tree.wlstmd.cloud" target="_blank" class="site-card">
-            <div class="site-card-left">
-              <div class="site-status" style="animation-delay: 2.4s"></div>
-              <span class="site-card-name">TREE<span>.wlstmd.cloud</span></span>
+            <div class="site-icon"><i class="fa-solid fa-seedling"></i></div>
+            <div class="site-info">
+              <strong>Tree</strong>
+              <small>tree.wlstmd.cloud</small>
             </div>
-            <span class="site-card-arrow">↗</span>
+            <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
           </a>
 
           <a href="https://wave.wlstmd.cloud" target="_blank" class="site-card">
-            <div class="site-card-left">
-              <div class="site-status" style="animation-delay: 2.8s"></div>
-              <span class="site-card-name">WAVE<span>.wlstmd.cloud</span></span>
+            <div class="site-icon"><i class="fa-solid fa-wave-square"></i></div>
+            <div class="site-info">
+              <strong>Wave</strong>
+              <small>wave.wlstmd.cloud</small>
             </div>
-            <span class="site-card-arrow">↗</span>
+            <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
           </a>
         </div>
       </section>
 
-      <!-- Social -->
-      <section class="social-section">
-        <p class="section-label">connect</p>
-        <div class="social-links">
+      <section class="section connect-section">
+        <div class="section-title">
+          <span></span>
+          <p>connect</p>
+        </div>
+
+        <div class="connect-grid">
           <a
             href="https://github.com/wlstmd"
             target="_blank"
-            aria-label="GitHub"
-            class="social-link"
+            class="connect-card"
           >
-            <i class="fab fa-github"></i> GitHub
+            <i class="fa-brands fa-github"></i>
+            <div>
+              <strong>GitHub</strong>
+              <small>github.com/wlstmd</small>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
           </a>
+
           <a
             href="https://www.linkedin.com/in/wlstmd"
             target="_blank"
-            aria-label="LinkedIn"
-            class="social-link"
+            class="connect-card"
           >
-            <i class="fab fa-linkedin"></i> LinkedIn
+            <i class="fa-brands fa-linkedin"></i>
+            <div>
+              <strong>LinkedIn</strong>
+              <small>linkedin.com/in/wlstmd</small>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
           </a>
+
           <a
             href="https://blog.naver.com/jinseung0327"
             target="_blank"
-            aria-label="Naver Blog"
-            class="social-link"
+            class="connect-card"
           >
-            <i class="fas fa-blog"></i> Naver Blog
+            <i class="fa-solid fa-blog"></i>
+            <div>
+              <strong>Naver Blog</strong>
+              <small>blog.naver.com/jinseung0327</small>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
           </a>
         </div>
       </section>
-    </div>
+
+      <footer class="footer">
+        <span>© 2026 wlstmd.cloud</span>
+        <span>All rights reserved.</span>
+      </footer>
+    </main>
 
     <script>
       function tick() {
         const now = new Date();
         const pad = (n) => String(n).padStart(2, "0");
+
         document.getElementById("clock").textContent =
           `${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+
         document.getElementById("date-str").textContent =
           `${now.getFullYear()}.${pad(now.getMonth() + 1)}.${pad(now.getDate())}`;
       }
-      setInterval(tick, 1000);
+
       tick();
+      setInterval(tick, 1000);
     </script>
   </body>
 </html>
